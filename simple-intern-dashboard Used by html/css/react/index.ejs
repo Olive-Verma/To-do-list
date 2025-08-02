@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Dashboard</title>
+</head>
+<body>
+    <h1>Intern Dashboard</h1>
+    <form action="/add-intern" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="position" placeholder="Position" required>
+        <button type="submit">Add Intern</button>
+    </form>
+    <h2>Interns List</h2>
+    <ul>
+        <% interns.forEach(intern => { %>
+            <li><%= intern.name %> - <%= intern.email %> - <%= intern.position %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>
